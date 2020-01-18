@@ -8,3 +8,5 @@ const GameCard = props => {
     </div>
   );
 };
+
+export default GameCard;
