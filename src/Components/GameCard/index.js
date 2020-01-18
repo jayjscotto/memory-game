@@ -3,9 +3,10 @@ import './game-card.css';
 
 const GameCard = props => {
   return (
-    <div className='card'>
-      <img className='guess-card-img' {...props} />
-    </div>
+      <img
+        className='card'
+        {...props}
+      />
   );
 };
 
