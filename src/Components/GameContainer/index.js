@@ -1,4 +1,4 @@
-import {React, Component} from 'react';
+import React, { Component } from 'react';
 
 // import all images here
 // put them in an array
@@ -18,7 +18,11 @@ class GameContainer extends Component {
     render() {
         return (
             <div className="game-container">
-                
+                {this.images.map(image => {
+                    return (
+                        <GameCard />
+                    )
+                })}
             </div>
         )
     }
