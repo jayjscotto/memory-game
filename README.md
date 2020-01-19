@@ -21,7 +21,6 @@ The homepage will display the game. Click on each character only once or the sco
 * [JavaScript](https://www.javascript.com/) - The scripting language used to manipulate the DOM.  
 * [Node](https://nodejs.org/en) - Javascript run-time environment that exectues server side code.
 * [Express](https://www.npmjs.com/package/express) - Node package used as middleware to create routes.
-* [Express-Handlebars](https://www.npmjs.com/package/express-handlebars) - Node package used as middleware to create templates for rendering pages. 
 * [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - Mark up language used for structuring pages. 
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Stylesheet language used to describe presentation of pages. 
 
