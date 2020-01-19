@@ -8,6 +8,7 @@
   transition: transform .2s;
   width: 150px;
   height: 150px;
+  display: inline-block;
 }
 
 .card:hover {

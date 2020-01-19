@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './container.css';
 import GameCard from '../GameCard';
+import GameStatus from '../GameStatus';
 // import all images here
 import card1 from '../../images/arya.jpg';
 import card2 from '../../images/baelish.jpg';
@@ -22,7 +23,8 @@ import card12 from '../../images/varys.jpg';
 
 class GameContainer extends Component {
   state = {
-    score: this.clicked.length,
+    score: 0,
+    highScore: 0,
     // array to contain all of the images that have been clicked
     clicked: [],
     //array of images
@@ -42,29 +44,43 @@ class GameContainer extends Component {
     ]
   };
 
+  // set images array in state object
   componentDidMount = () => {
     let images = this.state.images;
     this.setState({ images: images });
   };
 
-  // click handler for each card
-  // setState is asynchronous
-  // check if the card's id is in the clicked array
-  // if it is not, add the id to the state's array
-  // if it is, reset the game because the user lost
   cardClick = e => {
     // get the id from the card clicked
     const id = e.target.id;
-
     // create a new array with the old array of clicked cards, and add the new one
     const clicked = [...this.state.clicked, id];
 
-    // udpate the state
-    this.setState({ clicked });
+    if (this.state.clicked.indexOf(id) === -1) {
+      // update the score
+      let score = this.state.score;
+      score++;
+      // add one to the score and update the clicked array to track which images have been clicked
+      this.setState({ score });
+      this.setState({ clicked });
+    } else {
+      //reset the clicked array and return the score to 0
+      const clicked = [];
+      this.setState({ clicked });
+      this.setState({ score: 0 });
+    }
 
     // return the shuffling card function
     return this.shuffleCards(this.state.images);
   };
+
+  componentDidUpdate() {
+    // if the score is higher than the high score, update the high score
+    if (this.state.highScore < this.state.score) {
+      this.setState({ highScore: this.state.score });
+    }
+
+  }
 
   shuffleCards = array => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -84,14 +100,20 @@ class GameContainer extends Component {
           key={image.key}
           onClick={this.cardClick}
           src={image.image}
-          alt='Got Image'
+          alt={image.image}
         />
       );
     });
   };
 
   render() {
-    return <div className='game-container'>{this.printCards()}</div>;
+    return (
+      <div className='game-container'>
+
+        <GameStatus score={this.state.score} highScore={this.state.highScore} />
+        <div className='card-container'>{this.printCards()}</div>
+      </div>
+    );
   }
 }
 

@@ -1,7 +1,16 @@
 .game-container {
     display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 800px;
     margin: 1em auto;
+    text-align: center;
 }
+
