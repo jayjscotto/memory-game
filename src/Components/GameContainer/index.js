@@ -22,6 +22,7 @@ import card12 from '../../images/varys.jpg';
 
 class GameContainer extends Component {
   state = {
+    score: this.clicked.length,
     // array to contain all of the images that have been clicked
     clicked: [],
     //array of images
@@ -51,26 +52,19 @@ class GameContainer extends Component {
   // check if the card's id is in the clicked array
   // if it is not, add the id to the state's array
   // if it is, reset the game because the user lost
-  cardClick = async e => {
+  cardClick = e => {
+    // get the id from the card clicked
     const id = e.target.id;
-    //if the card has been clicked
-    //reset
-    if (this.state.clicked.indexOf(id) !== -1) {
-      console.log('Uh oh')
-      return this.shuffleCards(this.state.images);
-    } else {
-      this.updateClicked(id);
-      return this.shuffleCards(this.state.images);
-    }
 
+    // create a new array with the old array of clicked cards, and add the new one
+    const clicked = [...this.state.clicked, id];
+
+    // udpate the state
+    this.setState({ clicked });
+
+    // return the shuffling card function
+    return this.shuffleCards(this.state.images);
   };
-
-  updateClicked = async id => {
-    const newClicked = [...this.state.clicked, id];
-
-    const update = await this.setState({ clicked: newClicked });
-    console.log(this.state.clicked);
-  }
 
   shuffleCards = array => {
     for (let i = array.length - 1; i > 0; i--) {
