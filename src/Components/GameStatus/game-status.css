@@ -1,5 +1,77 @@
 .game-status {
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
 }
+
+div.status-card {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  height: fit-content;
+  margin: 0.5em;
+  padding: 1.5em;
+}
+
+div.score {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#game-score, #high-score {
+  width: 40%;
+}
+
+.score h1 {
+  margin: 0 1em;
+}
+
+.green, .red {
+  transition: transform 0.5s;
+  transform: scale(1.1);
+}
+
+.green {
+  animation: blinkingTextGreen 1.2s;
+}
+
+@keyframes blinkingTextGreen {
+  0% {
+    color: rgb(85, 83, 83);
+  }
+  49% {
+    color: rgb(85, 83, 83);
+  }
+  60% {
+    color: rgb(6, 247, 86);
+  }
+  99% {
+    color: rgb(6, 247, 86);
+  }
+  100% {
+    color: rgb(85, 83, 83);
+  }
+}
+
+.red {
+    animation: blinkingTextRed 1.2s
+}
+
+@keyframes blinkingTextRed {
+    0% {
+      color: rgb(85, 83, 83);
+    }
+    49% {
+      color: rgb(85, 83, 83);
+    }
+    60% {
+      color: rgb(247, 6, 6);
+    }
+    99% {
+      color: rgb(247, 6, 6);
+    }
+    100% {
+      color: rgb(85, 83, 83);
+    }
+  }
+  

@@ -41,7 +41,8 @@ class GameContainer extends Component {
       { image: card10, key: 10 },
       { image: card11, key: 11 },
       { image: card12, key: 12 }
-    ]
+    ],
+    scoreChange: ''
   };
 
   // set images array in state object
@@ -63,10 +64,12 @@ class GameContainer extends Component {
       // add one to the score and update the clicked array to track which images have been clicked
       this.setState({ score });
       this.setState({ clicked });
+      this.setState({scoreChange: 'green'});
     } else {
       //reset the clicked array and return the score to 0
       const clicked = [];
       this.setState({ clicked });
+      this.setState({scoreChange: 'red'});
       this.setState({ score: 0 });
     }
 
@@ -79,7 +82,9 @@ class GameContainer extends Component {
     if (this.state.highScore < this.state.score) {
       this.setState({ highScore: this.state.score });
     }
-
+    if (this.state.scoreChange != '') {
+      this.setState({scoreChange: ''});
+    }
   }
 
   shuffleCards = array => {
@@ -110,7 +115,7 @@ class GameContainer extends Component {
     return (
       <div className='game-container'>
 
-        <GameStatus score={this.state.score} highScore={this.state.highScore} />
+        <GameStatus scoreChange={this.state.scoreChange} score={this.state.score} highScore={this.state.highScore} />
         <div className='card-container'>{this.printCards()}</div>
       </div>
     );
