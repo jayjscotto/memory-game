@@ -1,3 +1,34 @@
+# Game of Thrones-themed Memory game
+Memory game with Game of Thrones characters built with React, Node, Express, and CSS.,
+Deployed with Heroku.
+
+## Using the Project
+The homepage will display the game. Click on each character only once or the score will reset!
+![sample](https://user-images.githubusercontent.com/50807550/72690545-5bcb5800-3aeb-11ea-8248-9c6c5d50ac1c.gif)
+
+## Using the deployed version
+* Navigate to: https://thrones-game.herokuapp.com
+
+## Local Usage
+* Clone this repository onto your local machine
+* In the project directory, run `$npm install`
+* Edit the `PORT` configuration in `server.js` if necessary
+* Run `npm start` to spin up the server and use the project!
+
+## Built With
+* [Heroku](https://www.heroku.com/)- Cloud platform which builds databases and websites deployed online. 
+* [React](https://reactjs.org/) -  A component-based JavaScript library for building user interfaces.
+* [JavaScript](https://www.javascript.com/) - The scripting language used to manipulate the DOM.  
+* [Node](https://nodejs.org/en) - Javascript run-time environment that exectues server side code.
+* [Express](https://www.npmjs.com/package/express) - Node package used as middleware to create routes.
+* [Express-Handlebars](https://www.npmjs.com/package/express-handlebars) - Node package used as middleware to create templates for rendering pages. 
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - Mark up language used for structuring pages. 
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Stylesheet language used to describe presentation of pages. 
+
+## Contributors
+Jason Scotto - [jayjscotto](https://github.com/jayjscotto)
+
+## Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -37,32 +68,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
