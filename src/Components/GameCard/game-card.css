@@ -5,11 +5,13 @@
   padding: 0.5em;
   text-align: center;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  transition: transform .2s;
   width: 150px;
   height: 150px;
 }
 
 .card:hover {
     cursor: pointer;
+    transform: scale(1.1);
 }
 

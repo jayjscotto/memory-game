@@ -55,6 +55,7 @@ class GameContainer extends Component {
       this.setState({clicked:[...this.state.clicked, id]});
     } else {
       // reset score
+      
     }
     this.shuffleCards(this.state.images);
   };
