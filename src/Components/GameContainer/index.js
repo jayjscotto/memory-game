@@ -82,7 +82,7 @@ class GameContainer extends Component {
     if (this.state.highScore < this.state.score) {
       this.setState({ highScore: this.state.score });
     }
-    if (this.state.scoreChange != '') {
+    if (this.state.scoreChange !== '') {
       this.setState({scoreChange: ''});
     }
   }
