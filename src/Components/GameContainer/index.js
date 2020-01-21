@@ -45,11 +45,6 @@ class GameContainer extends Component {
     scoreChange: ''
   };
 
-  // set images array in state object
-  componentDidMount = () => {
-    let images = this.state.images;
-    this.setState({ images: images });
-  };
 
   cardClick = e => {
     // get the id from the card clicked
